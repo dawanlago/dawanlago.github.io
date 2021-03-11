@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que cor é essa?</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3 class="display-3 d-flex justify-content-center">Que cor é essa?</h3>
+
+                <div id="cor">
+        
+                </div>   
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <input type="text" id="resposta" placeholder="Que cor você descobriu?">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-success btn-lg" onclick="descobrirCor()">Descobrir</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/app.js"></script>
+    <script>
+        gerarCorAleatoria();
+    </script>
+</body>
+</html>

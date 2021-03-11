@@ -1,0 +1,16 @@
+#cor {
+    width: 60vw;
+    height: 60vh;
+    background-color: #FBFBFB ;
+    margin: 0 auto;
+}
+
+input{
+    font-size: 26px;
+    padding: 10px;
+    border: none;
+    border:solid 1px #ccc;
+    border-radius: 10px 0 10px 0;
+    background-color: #FBFBFB;
+}
+
