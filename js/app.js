@@ -42,6 +42,7 @@ var cores = [
 function gerarCorAleatoria() {
     cor_escolhida = cor_escolhida = Math.floor(Math.random() * cores.length);
     document.getElementById('cor').style.backgroundColor = cores[cor_escolhida].hexadecimal;
+    document.getElementById('resposta').focus();
 }
 
 // Descobrir se a cor digitado é a escolhida aleatoriamente
@@ -50,6 +51,7 @@ function descobrirCor() {
 
     if (resposta === '') {
         alert("Campo de resposta não pode ficar vazio");
+        document.getElementById('resposta').focus();
         return;
     }
 
@@ -57,10 +59,12 @@ function descobrirCor() {
         alert("Parabéns!!! Você acertou");
         document.getElementById('resposta').value = '';
         gerarCorAleatoria();
+        document.getElementById('resposta').focus();
     } else {
         alert("A cor correta era " + cores[cor_escolhida].cor + ". Vamos tentar novamente")
         document.getElementById('resposta').value = '';
         gerarCorAleatoria();
+        document.getElementById('resposta').focus();
     }
 }
 
