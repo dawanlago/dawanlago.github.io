@@ -32,18 +32,27 @@ var cores = [
         cor: 'Laranja',
         hexadecimal: '#FFA500'
     },
+    {
+        cor: 'Roxo',
+        hexadecimal: '#993399'
+    }
 ];
-
-var cor_escolhida = Math.floor(Math.random() * 8);
 
 // Gerar cores aleatórias
 function gerarCorAleatoria() {
-    cor_escolhida = cor_escolhida = Math.floor(Math.random() * 8);
+    cor_escolhida = cor_escolhida = Math.floor(Math.random() * cores.length);
     document.getElementById('cor').style.backgroundColor = cores[cor_escolhida].hexadecimal;
 }
 
+// Descobrir se a cor digitado é a escolhida aleatoriamente
 function descobrirCor() {
-    var resposta = document.getElementById('resposta').value;
+    let resposta = document.getElementById('resposta').value;
+
+    if (resposta === '') {
+        alert("Campo de resposta não pode ficar vazio");
+        return;
+    }
+
     if (resposta === cores[cor_escolhida].cor) {
         alert("Parabéns!!! Você acertou");
         document.getElementById('resposta').value = '';
